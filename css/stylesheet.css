@@ -23,7 +23,7 @@ nav a {
 
 h1 {
   font-family: 'Yatra One', cursive;
-  font-size: 30px;
+  font-size: 60px;
 }
 
 nav a:hover, a:focus{
@@ -64,7 +64,7 @@ a.skiplink:focus, a.skiplink:active{
 
 #container{
   width: 500px;
-  margin: 20px 0px 0px 100px;
+  margin: 0 auto;
   position: relative;
   background-color: white;
 }
