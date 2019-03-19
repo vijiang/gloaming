@@ -1,0 +1,198 @@
+/* NORMAL */
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Baskerville', serif;
+  line-height: initial;
+  letter-spacing: 0.5px;
+  font-size: 0.95em;
+}
+
+nav {
+  padding-bottom: 10px;
+}
+
+nav a {
+  display:inline;
+  margin-right: 10px;
+  padding-left: 0px;
+  text-decoration: underline;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+h1 {
+  font-family: 'Yatra One', cursive;
+  font-size: 30px;
+}
+
+nav a:hover, a:focus{
+  background-color: #0D1A80;
+  color:#FFFFFF;
+  top: -20px;
+}
+
+a.skiplink{
+  position: relative;
+    top: -80px;
+    transition: top ease-in 0.3s;
+}
+
+a.skiplink:focus, a.skiplink:active{
+  display: inline;
+  top: 0px;
+}
+
+.credit-text
+{
+  font-size: 11px;
+  font-style: italic;
+}
+
+.current{
+  background-color: #0D1A80;
+  text-transform: capitalize;
+  color:#FFFFFF;
+}
+
+.post-title{
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+
+.poem-body{
+  width: 300px;
+}
+
+#container{
+  width: 600px;
+  margin: 20px 0px 0px 100px;
+  position: relative;
+  background-color: white;
+}
+
+.gallery{
+  display: grid;
+  grid-template: 300px 300px 300px / 300px 300px 300px;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.gallery > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-image
+{
+  background-image: url("../images/oppbg.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* MEDIA QUERIES  */
+
+@media (max-width: 768px)
+  /* iPad Mini */
+  /* 768 x 1024 */
+  /* changes into a grid layout with the header/nav and content in separate columns */
+{
+
+  body {
+    background-color: #FFFFFF;
+    background-image: none;
+  }
+
+  #container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    width: auto;
+  }
+
+  header {
+    padding: 10px;
+    grid-column: 1 / 2;
+  }
+
+  nav a {
+    color: #inherit;
+    width:100%;
+    display:block;
+    margin: 3px 0px 3px 3px;
+  }
+
+  #maincontent {
+    padding: 10px;
+  }
+
+
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery > img {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 750px)
+  /* iPhone 8 */
+  /* Changes the background colour and navigation layout, current nav indicator colour */
+{
+  body {
+    background-color: #c5b7b7;
+  }
+
+  #container{
+    display: inline;
+    width: 100%;
+    margin: 0;
+    background-color: inherit;
+  }
+
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery > img {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  nav {
+    background-color: white;
+    padding: 10px;
+  }
+
+  nav a {
+    color: black;
+    width:100%;
+    display:block;
+    margin: 3px;
+  }
+
+  .current{
+    background-color: #b7c5c5;
+    text-transform: capitalize;
+    color:#FFFFFF;
+  }
+
+  #maincontent {
+    margin: 10px;
+    padding: 15px;
+    background-color: white;
+  }
+
+
+}
